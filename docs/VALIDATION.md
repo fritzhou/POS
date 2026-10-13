@@ -65,3 +65,41 @@ Phase 6D adds **80 Flutter tests**: 78 invitation domain/repository/widget tests
 The new SQL checks cover current Owner/Admin role/MFA, full original multi-branch scope including inactive branches, Owner-only Admin-invitation mutation, creator-private canonical retry fields, bounded literal search, legacy missing scope, immutable action/request/audit, revisions and atomic rollback. Real concurrent sessions verify acceptance versus revocation, duplicate original revocations, changed revisions and one delivery claim. A claim committed before revocation preserves unknown or recorded mail evidence without granting membership; revocation before the claim prevents dispatch. The fresh fifteen-migration run also reran every preceding financial/security/logistics assertion and all 200 changing report snapshot checks. The invitation fixture distinguishes pending/sending from revoked/sent and contains only isolated test data.
 
 The final installation script, analysis, all 957 Flutter tests, four Deno checks, formatting/lint and 80 function tests passed. The rebuilt APK was inspected for actual ARM64 Flutter/SQLCipher libraries, the printing plugin/FileProvider, licensed font bytes/provenance and compiled backup exclusions. The 27 actual empty preview captures passed; the new phone/desktop invitation images were visually inspected. Environment draft revision 11 was read back with exact complete scripts and unchanged repository/network/secret bindings. Only the root-created isolated PostgreSQL service and its anonymous volume were removed; the pinned image was retained. Saving the draft does not publish it or validate restoration. Live Supabase/Auth/email/MFA acceptance, Windows compilation and physical device/peripheral behavior remain unverified.
+
+
+## Installable release validation — 13 October 2026 (Asia/Shanghai)
+
+The user selected the disconnected design preview. A dedicated retained Android
+release key signs the universal release APK; there is no debug signing fallback.
+The APK is 95,578,513 bytes, SHA-256
+`72c2b3c54c8f612ad7b43bdd9764eb7cb27f3e1eebf3da5a7fd3362fc87dae4c`.
+Static inspection verified release flags, all ARM32/ARM64/x64 Flutter/AOT/SQLCipher
+libraries, font/license bytes, icons, R8 printing classes and backup resources.
+Actual installation, cold launch and entry into the empty read-only preview passed
+on an official AOSP API 30 x86_64 software emulator. The app remained foreground
+without crashes or missing assets, and FLAG_SECURE stayed enabled. Task-owned
+emulator/container/AVD/key storage was removed; verified SDK packages and logs remain.
+
+A real `windows-latest` runner completed release build and packaging at commit
+`8d4e25c17142ebf9c6c60b8293b501e7a50388bd` on the approved `release/builds` branch.
+[Run 38382073918](https://github.com/fritzhou/POS/actions/runs/38382073918)
+passed analysis and all 957 Windows tests. The 32,439,152-byte portable ZIP contains
+all 33 runtime files, including Flutter, AOT/ICU/assets, plugin/PDFium/SQLCipher
+and app-local MSVC DLLs. Its SHA-256 is
+`1ef886f3f7ecf9545f263e980317f12b91f6a3dd069b4da5c563c5cd0ab68267`.
+The 25,549,899-byte Inno installer has SHA-256
+`4c6cd4f822d8eb503e012173291f4bb48934dd4ebde19ed4648e072031e0519e`.
+ZIP extraction/launch, installer installation, every installed runtime file's
+integrity, installed launch and uninstall passed on the disposable runner.
+Independent downloaded-artifact checks verified ZIP CRCs, complete manifests,
+x64 PE headers, pinned SQLCipher bytes, licensed fonts and native smoke reports.
+Windows EXE/installer Authenticode signing remains unconfigured.
+
+The final Linux run passed analysis and all 957 tests after correcting test-only
+Windows fixture teardown order. Financial/restart assertions remain unchanged;
+no Windows test is skipped. All 80 function tests passed. Release preparation
+changed no SQL; the fifteen-migration Phase 6D run above remains the current
+1,227-assertion plus 200-report-snapshot backend checkpoint. Live Supabase/email,
+physical devices/peripherals, commercial acceptance and fresh-task restoration
+remain separate gates. Complete tested startup/release instructions were saved
+and read back as environment draft revision 13 with existing settings preserved.
