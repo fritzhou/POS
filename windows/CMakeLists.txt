@@ -55,6 +55,8 @@ add_subdirectory("runner")
 
 # Generated plugin build rules, which manage building the plugins and adding
 # them to the application.
+# Preserve the existing vault/file namespace when branding the executable name.
+set(STORAGE_PREFIX "nexapos")
 include(flutter/generated_plugins.cmake)
 
 

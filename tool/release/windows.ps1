@@ -92,6 +92,8 @@ function Assert-X64Pe {
 $originalLocation = Get-Location
 try {
     Set-Location $repo
+    # First invocation may bootstrap the Flutter tool and emit pub text on stdout.
+    Invoke-Checked flutter @('--version')
     $flutter = (& flutter --version --machine | Out-String | ConvertFrom-Json)
     if ($LASTEXITCODE -ne 0 -or $flutter.frameworkVersion -ne '3.44.0') { throw 'Use the exact validated Flutter version: 3.44.0.' }
     Invoke-Checked flutter @('doctor', '-v')
