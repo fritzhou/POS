@@ -154,6 +154,7 @@ class Harness {
   late OfflineGrantVerifier verifier;
   late SimpleKeyPair signingKey;
   late SupabaseOfflineWorkspace workspace;
+  Future<void>? _closeFuture;
   DateTime wall = issuedAt;
   bool recovery = false, signedOut = false;
   int prepareDrops = 0, ingestDrops = 0;
@@ -536,10 +537,14 @@ class Harness {
     await workspace.enterOffline(branch);
   }
 
-  Future<void> close() async {
-    await client.dispose();
-    await db.close();
-    await journal.close();
+  Future<void> close() => _closeFuture ??= _close();
+
+  Future<void> _close() async {
+    try {
+      await client.dispose();
+    } finally {
+      await Future.wait([db.close(), journal.close()]);
+    }
   }
 }
 
@@ -564,8 +569,12 @@ void main() {
       final directory = await Directory.systemTemp.createTemp(
         'nexapos-partial-reopen-',
       );
-      addTearDown(() => directory.delete(recursive: true));
       h = Harness(directory: directory);
+      final fileHarness = h;
+      addTearDown(() async {
+        await fileHarness.close();
+        await directory.delete(recursive: true);
+      });
       await h.initialize();
       await h.ready();
       final original = await h.checkoutRequest();
@@ -848,8 +857,12 @@ void main() {
       final directory = await Directory.systemTemp.createTemp(
         'nexapos-partial-seal-reopen-',
       );
-      addTearDown(() => directory.delete(recursive: true));
       h = Harness(directory: directory);
+      final fileHarness = h;
+      addTearDown(() async {
+        await fileHarness.close();
+        await directory.delete(recursive: true);
+      });
       await h.initialize();
       await h.ready();
       final original = await h.checkoutRequest();
@@ -1419,8 +1432,12 @@ void main() {
       final directory = await Directory.systemTemp.createTemp(
         'nexapos-offline-prepare-',
       );
-      addTearDown(() => directory.delete(recursive: true));
       h = Harness(directory: directory);
+      final fileHarness = h;
+      addTearDown(() async {
+        await fileHarness.close();
+        await directory.delete(recursive: true);
+      });
       await h.initialize();
       h.prepareDrops = 1;
       await expectLater(
@@ -1451,8 +1468,12 @@ void main() {
       final directory = await Directory.systemTemp.createTemp(
         'nexapos-offline-ingest-',
       );
-      addTearDown(() => directory.delete(recursive: true));
       h = Harness(directory: directory);
+      final fileHarness = h;
+      addTearDown(() async {
+        await fileHarness.close();
+        await directory.delete(recursive: true);
+      });
       await h.initialize();
       await h.ready();
       await h.workspace.checkout(await h.checkoutRequest());
@@ -1483,8 +1504,12 @@ void main() {
       final directory = await Directory.systemTemp.createTemp(
         'nexapos-offline-tender-',
       );
-      addTearDown(() => directory.delete(recursive: true));
       h = Harness(directory: directory);
+      final fileHarness = h;
+      addTearDown(() async {
+        await fileHarness.close();
+        await directory.delete(recursive: true);
+      });
       await h.initialize();
       await h.ready();
       final intent = await h.checkoutRequest();

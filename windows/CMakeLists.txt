@@ -57,6 +57,9 @@ add_subdirectory("runner")
 # them to the application.
 # Preserve the existing vault/file namespace when branding the executable name.
 set(STORAGE_PREFIX "nexapos")
+# Windows uses its native plugins, not the optional Android Java bridge. The
+# locked JNI plugin also has an invalid Windows JVM delay-load target.
+set(CMAKE_DISABLE_FIND_PACKAGE_JNI TRUE)
 include(flutter/generated_plugins.cmake)
 
 

@@ -49,6 +49,15 @@ if (Test-Path -LiteralPath $installer) {
     if ($process.ExitCode -ne 0) { throw "Installer smoke failed, code $($process.ExitCode)." }
     $uninstaller = Join-Path $installPath 'unins000.exe'
     if (-not (Test-Path -LiteralPath $uninstaller)) { throw 'Installer did not include an uninstaller.' }
+    $manifest = Get-Content -LiteralPath (Join-Path $ArtifactDirectory 'NexaPOS-Windows-Manifest.json') -Raw | ConvertFrom-Json
+    foreach ($item in $manifest) {
+        $installed = Join-Path $installPath $item.path
+        if (-not (Test-Path -LiteralPath $installed) -or
+            (Get-Item -LiteralPath $installed).Length -ne $item.bytes -or
+            (Get-FileHash -LiteralPath $installed -Algorithm SHA256).Hash.ToLowerInvariant() -ne $item.sha256) {
+            throw "Installer omitted or changed a runtime file: $($item.path)"
+        }
+    }
     Test-NativeLaunch $installPath 'Installed release'
     $process = Start-Process -FilePath $uninstaller -ArgumentList @('/VERYSILENT', '/SUPPRESSMSGBOXES', '/NORESTART') -PassThru -Wait
     if ($process.ExitCode -ne 0 -or (Test-Path -LiteralPath (Join-Path $installPath 'NexaPOS.exe'))) {

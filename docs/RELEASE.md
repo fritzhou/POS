@@ -65,7 +65,8 @@ pwsh -File tool/release/windows.ps1 -OutputDirectory C:\NexaPOS-release
 
 The script builds `NexaPOS.exe` and packages the complete Release directory,
 including Flutter, plugin and SQLCipher DLLs, app-local MSVC redistributables and
-`data/`. It verifies x64 PE headers, pinned SQLCipher/font bytes, and every ZIP
+`data/`. The original `nexapos` secure-storage namespace is retained when
+branding the executable; Windows does not acquire an optional JVM dependency. It verifies x64 PE headers, pinned SQLCipher/font bytes, and every ZIP
 entry after extraction. It produces `NexaPOS-Windows-Portable.zip`; when Inno
 Setup is installed it also produces `NexaPOS-Windows-Setup.exe` with Start Menu
 and optional desktop shortcuts and an uninstaller. Uninstall removes application
