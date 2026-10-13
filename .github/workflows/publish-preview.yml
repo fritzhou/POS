@@ -1,0 +1,39 @@
+name: Upload existing NexaPOS Preview files
+
+on:
+  workflow_dispatch:
+    inputs:
+      blob_manifest:
+        description: Git blob chunks for the already verified Android APK and public report
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: nexapos-preview-existing-assets
+  cancel-in-progress: false
+
+jobs:
+  upload-existing-files:
+    if: github.repository == 'fritzhou/POS' && github.ref == 'refs/heads/release/builds'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out publication tooling only
+        uses: actions/checkout@v4
+      - name: Retrieve the previously verified Windows packages
+        uses: actions/download-artifact@v4
+        with:
+          name: NexaPOS-Windows-x64
+          run-id: 38382073918
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/verified-preview
+      - name: Restore, verify and upload existing assets to the draft
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BLOB_MANIFEST: ${{ inputs.blob_manifest }}
+          PREVIEW_DIRECTORY: ${{ runner.temp }}/verified-preview
+        run: python3 tool/release/publish_existing_preview.py
