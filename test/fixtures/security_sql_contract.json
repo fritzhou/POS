@@ -1,0 +1,92 @@
+{
+  "grants": [
+    {
+      "state": "administratively_resolved",
+      "actor_id": "a5c00000-0000-4000-8000-000000000001",
+      "currency": "PHP",
+      "grant_id": "c02056d5-a385-40d7-84c5-f87376f8032d",
+      "shift_id": "e4a15391-1a45-4ca4-ac89-73c14f3bb9fc",
+      "branch_id": "49d73618-000a-47a2-9ec1-d9ea8ceb28c5",
+      "device_id": "a5c10000-0000-4000-8000-000000000001",
+      "issued_at": "2026-10-11T03:09:45.089Z",
+      "can_review": false,
+      "expires_at": "2026-10-11T11:09:45.089Z",
+      "max_events": 1000,
+      "released_at": null,
+      "total_minor": 100,
+      "review_count": 1,
+      "last_sequence": 1,
+      "outcome_count": 1,
+      "max_total_minor": 100000000,
+      "organization_id": "1670e059-411e-4274-9a39-ad83b78e8dfa",
+      "blocks_shift_close": false,
+      "remaining_exposure_minor": 99999900,
+      "remaining_exposure_events": 999,
+      "administratively_resolved_at": "2026-10-11T12:09:45.611Z"
+    }
+  ],
+  "policy": {
+    "revision": 2,
+    "organization_id": "1670e059-411e-4274-9a39-ad83b78e8dfa",
+    "idle_lock_minutes": 10,
+    "require_privileged_mfa": false
+  },
+  "devices": [
+    {
+      "actor_id": "a5c00000-0000-4000-8000-000000000001",
+      "platform": "windows",
+      "branch_id": "49d73618-000a-47a2-9ec1-d9ea8ceb28c5",
+      "device_id": "a5c10000-0000-4000-8000-000000000001",
+      "can_manage": true,
+      "revoked_at": "2026-10-11T12:09:45.087Z",
+      "device_name": "Actual review-race device",
+      "enrolled_at": "2026-10-11T12:09:45.077Z",
+      "last_sync_at": "2026-10-11T12:09:45.628Z",
+      "organization_id": "1670e059-411e-4274-9a39-ad83b78e8dfa",
+      "revocation_reason": "Actual lost-key race device"
+    }
+  ],
+  "provenance": "Actual Phase 5 RPC projections from isolated mock-Auth PostgreSQL test fixtures; never production records",
+  "notifications": [
+    {
+      "id": "1ea5257f-36d2-46cd-a53a-ccc7f42e31e6",
+      "title": "Paid offline event needs review",
+      "action": "security.offline_paid_event_review",
+      "message": "Original paid evidence was retained for reconciliation without changing the closed or revoked shift.",
+      "read_at": null,
+      "branch_id": "49d73618-000a-47a2-9ec1-d9ea8ceb28c5",
+      "created_at": "2026-10-11T12:09:45.608Z",
+      "organization_id": "1670e059-411e-4274-9a39-ad83b78e8dfa"
+    },
+    {
+      "id": "93c4309d-fcdc-432d-bd1b-2cc0d84b30cb",
+      "title": "Offline grant reviewed",
+      "action": "security.grant_administratively_resolved",
+      "message": "An expired grant on a revoked device was administratively resolved. Unknown paid-event exposure remains open for reconciliation.",
+      "read_at": null,
+      "branch_id": "49d73618-000a-47a2-9ec1-d9ea8ceb28c5",
+      "created_at": "2026-10-11T12:09:45.604Z",
+      "organization_id": "1670e059-411e-4274-9a39-ad83b78e8dfa"
+    },
+    {
+      "id": "c7e0666b-e0c1-4fb0-be3d-86c2b85aa46d",
+      "title": "Security policy changed",
+      "action": "security.policy_updated",
+      "message": "An administrator changed the idle lock or privileged MFA policy.",
+      "read_at": null,
+      "branch_id": null,
+      "created_at": "2026-10-11T12:09:45.182Z",
+      "organization_id": "1670e059-411e-4274-9a39-ad83b78e8dfa"
+    },
+    {
+      "id": "269b45f1-6ee1-4227-8785-7dc4187a2c6c",
+      "title": "Device revoked",
+      "action": "security.device_revoked",
+      "message": "An administrator revoked offline capture for an enrolled device. Original paid evidence remains eligible for review.",
+      "read_at": null,
+      "branch_id": "49d73618-000a-47a2-9ec1-d9ea8ceb28c5",
+      "created_at": "2026-10-11T12:09:45.048Z",
+      "organization_id": "1670e059-411e-4274-9a39-ad83b78e8dfa"
+    }
+  ]
+}

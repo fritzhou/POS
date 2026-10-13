@@ -1,0 +1,393 @@
+{
+  "context": {
+    "currency": "PHP",
+    "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+    "branch_name": "Main Branch",
+    "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+    "settings_revision": 1
+  },
+  "creation": {
+    "kind": "purchase.create",
+    "order": {
+      "id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+      "items": [
+        {
+          "id": "090c4af9-26e6-43e2-a71d-b885603ebae1",
+          "sku": "P6-PURCHASE-1",
+          "unit": "each",
+          "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+          "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+          "product_id": "c6400000-0000-4000-8000-000000000001",
+          "current_sku": "P6-PURCHASE-1",
+          "current_unit": "each",
+          "product_name": "Original product 1",
+          "line_cost_minor": 625,
+          "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+          "unit_cost_minor": 125,
+          "current_currency": "PHP",
+          "ordered_quantity": 5,
+          "product_revision": 1,
+          "received_quantity": 0,
+          "cancelled_quantity": 0,
+          "remaining_quantity": 5,
+          "current_product_name": "Original product 1",
+          "current_product_active": true,
+          "current_product_revision": 1
+        },
+        {
+          "id": "876c8755-8763-489b-9a66-ea5711e64e00",
+          "sku": "P6-PURCHASE-2",
+          "unit": "each",
+          "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+          "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+          "product_id": "c6400000-0000-4000-8000-000000000002",
+          "current_sku": "P6-PURCHASE-2",
+          "current_unit": "each",
+          "product_name": "Original product 2",
+          "line_cost_minor": 0,
+          "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+          "unit_cost_minor": 0,
+          "current_currency": "PHP",
+          "ordered_quantity": 3,
+          "product_revision": 1,
+          "received_quantity": 0,
+          "cancelled_quantity": 0,
+          "remaining_quantity": 3,
+          "current_product_name": "Original product 2",
+          "current_product_active": true,
+          "current_product_revision": 1
+        }
+      ],
+      "reason": "Operator submitted purchase order",
+      "status": "ordered",
+      "currency": "PHP",
+      "revision": 1,
+      "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+      "reference": "PO manual reference",
+      "created_at": "2026-10-12T00:55:36.946Z",
+      "created_by": "c6000000-0000-4000-8000-000000000001",
+      "line_count": 2,
+      "supplier_id": "c6300000-0000-4000-8000-000000000001",
+      "cancellation": null,
+      "receipt_count": 0,
+      "supplier_name": "Original supplier",
+      "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+      "settings_revision": 1,
+      "supplier_revision": 1,
+      "ordered_total_minor": 625,
+      "received_total_minor": 0
+    },
+    "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+    "request_id": "c6500000-0000-4000-8000-000000000001",
+    "order_revision": 1
+  },
+  "receipts": [
+    {
+      "id": "2b12fd52-5c52-4579-9726-8fbceac72756",
+      "reason": "Physical units received and counted",
+      "currency": "PHP",
+      "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+      "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+      "reference": "Delivery manual reference",
+      "line_count": 1,
+      "received_at": "2026-10-12T00:55:36.946Z",
+      "received_by": "c6000000-0000-4000-8000-000000000001",
+      "operation_id": "5144d737-317c-471b-a921-9cdaf2e0553b",
+      "order_revision": 2,
+      "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+      "received_total_minor": 250
+    },
+    {
+      "id": "5a1891b2-bb7d-421a-853e-07a1bcba6d70",
+      "reason": "Physical units received and counted",
+      "currency": "PHP",
+      "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+      "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+      "reference": "Delivery manual reference",
+      "line_count": 1,
+      "received_at": "2026-10-12T00:55:36.946Z",
+      "received_by": "c6000000-0000-4000-8000-000000000001",
+      "operation_id": "29b7d096-8bbe-4551-a3ed-ae94fc0cadb1",
+      "order_revision": 3,
+      "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+      "received_total_minor": 125
+    }
+  ],
+  "final_order": {
+    "id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+    "items": [
+      {
+        "id": "090c4af9-26e6-43e2-a71d-b885603ebae1",
+        "sku": "P6-PURCHASE-1",
+        "unit": "each",
+        "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+        "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+        "product_id": "c6400000-0000-4000-8000-000000000001",
+        "current_sku": "P6-RENAMED",
+        "current_unit": "each",
+        "product_name": "Original product 1",
+        "line_cost_minor": 625,
+        "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+        "unit_cost_minor": 125,
+        "current_currency": "USD",
+        "ordered_quantity": 5,
+        "product_revision": 1,
+        "received_quantity": 3,
+        "cancelled_quantity": 2,
+        "remaining_quantity": 0,
+        "current_product_name": "Renamed product",
+        "current_product_active": true,
+        "current_product_revision": 2
+      },
+      {
+        "id": "876c8755-8763-489b-9a66-ea5711e64e00",
+        "sku": "P6-PURCHASE-2",
+        "unit": "each",
+        "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+        "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+        "product_id": "c6400000-0000-4000-8000-000000000002",
+        "current_sku": "P6-PURCHASE-2",
+        "current_unit": "each",
+        "product_name": "Original product 2",
+        "line_cost_minor": 0,
+        "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+        "unit_cost_minor": 0,
+        "current_currency": "PHP",
+        "ordered_quantity": 3,
+        "product_revision": 1,
+        "received_quantity": 0,
+        "cancelled_quantity": 3,
+        "remaining_quantity": 0,
+        "current_product_name": "Original product 2",
+        "current_product_active": true,
+        "current_product_revision": 1
+      }
+    ],
+    "reason": "Operator submitted purchase order",
+    "status": "cancelled",
+    "currency": "PHP",
+    "revision": 4,
+    "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+    "reference": "PO manual reference",
+    "created_at": "2026-10-12T00:55:36.946Z",
+    "created_by": "c6000000-0000-4000-8000-000000000001",
+    "line_count": 2,
+    "supplier_id": "c6300000-0000-4000-8000-000000000001",
+    "cancellation": {
+      "id": "a511a5e9-223f-4a9d-86fe-9fda69dd15d7",
+      "items": [
+        {
+          "sku": "P6-PURCHASE-1",
+          "unit": "each",
+          "product_id": "c6400000-0000-4000-8000-000000000001",
+          "product_name": "Original product 1",
+          "order_item_id": "090c4af9-26e6-43e2-a71d-b885603ebae1",
+          "line_cost_minor": 250,
+          "unit_cost_minor": 125,
+          "cancelled_quantity": 2
+        },
+        {
+          "sku": "P6-PURCHASE-2",
+          "unit": "each",
+          "product_id": "c6400000-0000-4000-8000-000000000002",
+          "product_name": "Original product 2",
+          "order_item_id": "876c8755-8763-489b-9a66-ea5711e64e00",
+          "line_cost_minor": 0,
+          "unit_cost_minor": 0,
+          "cancelled_quantity": 3
+        }
+      ],
+      "reason": "Supplier remainder explicitly cancelled",
+      "currency": "PHP",
+      "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+      "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+      "created_at": "2026-10-12T00:55:36.946Z",
+      "actor_user_id": "c6000000-0000-4000-8000-000000000001",
+      "order_revision": 4,
+      "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+      "cancelled_total_minor": 250
+    },
+    "receipt_count": 2,
+    "supplier_name": "Original supplier",
+    "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+    "settings_revision": 1,
+    "supplier_revision": 1,
+    "ordered_total_minor": 625,
+    "received_total_minor": 375
+  },
+  "cancellation": {
+    "kind": "purchase.cancel_remaining",
+    "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+    "request_id": "c6700000-0000-4000-8000-000000000001",
+    "cancellation": {
+      "id": "a511a5e9-223f-4a9d-86fe-9fda69dd15d7",
+      "items": [
+        {
+          "sku": "P6-PURCHASE-1",
+          "unit": "each",
+          "product_id": "c6400000-0000-4000-8000-000000000001",
+          "product_name": "Original product 1",
+          "order_item_id": "090c4af9-26e6-43e2-a71d-b885603ebae1",
+          "line_cost_minor": 250,
+          "unit_cost_minor": 125,
+          "cancelled_quantity": 2
+        },
+        {
+          "sku": "P6-PURCHASE-2",
+          "unit": "each",
+          "product_id": "c6400000-0000-4000-8000-000000000002",
+          "product_name": "Original product 2",
+          "order_item_id": "876c8755-8763-489b-9a66-ea5711e64e00",
+          "line_cost_minor": 0,
+          "unit_cost_minor": 0,
+          "cancelled_quantity": 3
+        }
+      ],
+      "reason": "Supplier remainder explicitly cancelled",
+      "currency": "PHP",
+      "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+      "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+      "created_at": "2026-10-12T00:55:36.946Z",
+      "actor_user_id": "c6000000-0000-4000-8000-000000000001",
+      "order_revision": 4,
+      "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+      "cancelled_total_minor": 250
+    },
+    "order_revision": 4
+  },
+  "cancel_request": {
+    "p_reason": "Supplier remainder explicitly cancelled",
+    "p_order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+    "p_branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+    "p_request_id": "c6700000-0000-4000-8000-000000000001",
+    "p_organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+    "p_expected_revision": 3
+  },
+  "create_request": {
+    "p_items": [
+      {
+        "quantity": 5,
+        "product_id": "c6400000-0000-4000-8000-000000000001",
+        "unit_cost_minor": 125,
+        "expected_revision": 1
+      },
+      {
+        "quantity": 3,
+        "product_id": "c6400000-0000-4000-8000-000000000002",
+        "unit_cost_minor": 0,
+        "expected_revision": 1
+      }
+    ],
+    "p_reason": "Operator submitted purchase order",
+    "p_currency": "PHP",
+    "p_branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+    "p_reference": "PO manual reference",
+    "p_request_id": "c6500000-0000-4000-8000-000000000001",
+    "p_supplier_id": "c6300000-0000-4000-8000-000000000001",
+    "p_organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+    "p_expected_settings_revision": 1,
+    "p_expected_supplier_revision": 1
+  },
+  "second_receipt": {
+    "kind": "purchase.receive",
+    "receipt": {
+      "id": "5a1891b2-bb7d-421a-853e-07a1bcba6d70",
+      "items": [
+        {
+          "id": "5e7dbc06-3e7a-4067-840f-1d12448bdc26",
+          "sku": "P6-PURCHASE-1",
+          "unit": "each",
+          "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+          "quantity": 1,
+          "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+          "product_id": "c6400000-0000-4000-8000-000000000001",
+          "receipt_id": "5a1891b2-bb7d-421a-853e-07a1bcba6d70",
+          "movement_id": "977f9337-1c48-44bb-8239-6d35fbedf794",
+          "operation_id": "29b7d096-8bbe-4551-a3ed-ae94fc0cadb1",
+          "product_name": "Original product 1",
+          "balance_after": 3,
+          "order_item_id": "090c4af9-26e6-43e2-a71d-b885603ebae1",
+          "stock_revision": 2,
+          "line_cost_minor": 125,
+          "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+          "unit_cost_minor": 125,
+          "product_revision": 2
+        }
+      ],
+      "reason": "Physical units received and counted",
+      "currency": "PHP",
+      "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+      "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+      "reference": "Delivery manual reference",
+      "line_count": 1,
+      "received_at": "2026-10-12T00:55:36.946Z",
+      "received_by": "c6000000-0000-4000-8000-000000000001",
+      "operation_id": "29b7d096-8bbe-4551-a3ed-ae94fc0cadb1",
+      "order_revision": 3,
+      "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+      "received_total_minor": 125
+    },
+    "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+    "request_id": "c6600000-0000-4000-8000-000000000002",
+    "order_revision": 3
+  },
+  "partial_receipt": {
+    "kind": "purchase.receive",
+    "receipt": {
+      "id": "2b12fd52-5c52-4579-9726-8fbceac72756",
+      "items": [
+        {
+          "id": "52801b5d-4d24-44ba-8bcd-4ff01b82bcdf",
+          "sku": "P6-PURCHASE-1",
+          "unit": "each",
+          "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+          "quantity": 2,
+          "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+          "product_id": "c6400000-0000-4000-8000-000000000001",
+          "receipt_id": "2b12fd52-5c52-4579-9726-8fbceac72756",
+          "movement_id": "5dc320e1-a6f4-4d16-9b5b-70adf03cc83e",
+          "operation_id": "5144d737-317c-471b-a921-9cdaf2e0553b",
+          "product_name": "Original product 1",
+          "balance_after": 2,
+          "order_item_id": "090c4af9-26e6-43e2-a71d-b885603ebae1",
+          "stock_revision": 1,
+          "line_cost_minor": 250,
+          "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+          "unit_cost_minor": 125,
+          "product_revision": 1
+        }
+      ],
+      "reason": "Physical units received and counted",
+      "currency": "PHP",
+      "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+      "branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+      "reference": "Delivery manual reference",
+      "line_count": 1,
+      "received_at": "2026-10-12T00:55:36.946Z",
+      "received_by": "c6000000-0000-4000-8000-000000000001",
+      "operation_id": "5144d737-317c-471b-a921-9cdaf2e0553b",
+      "order_revision": 2,
+      "organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+      "received_total_minor": 250
+    },
+    "order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+    "request_id": "c6600000-0000-4000-8000-000000000001",
+    "order_revision": 2
+  },
+  "receive_request": {
+    "p_items": [
+      {
+        "quantity": 2,
+        "order_item_id": "090c4af9-26e6-43e2-a71d-b885603ebae1",
+        "expected_product_revision": 1
+      }
+    ],
+    "p_reason": "Physical units received and counted",
+    "p_order_id": "341d3ae4-8833-4de0-a196-8d8597a80888",
+    "p_branch_id": "4a076d83-cba0-46f1-af3f-cfe7cf9ac0ff",
+    "p_reference": "Delivery manual reference",
+    "p_request_id": "c6600000-0000-4000-8000-000000000001",
+    "p_organization_id": "facb7095-34a2-4ed9-9e2e-e9991e50ccf9",
+    "p_expected_revision": 1
+  }
+}

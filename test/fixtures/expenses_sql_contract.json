@@ -1,0 +1,101 @@
+{
+  "context": {
+    "currency": "PHP",
+    "branch_id": "2130df52-93a1-4bb0-97f9-d7abc7b38d8c",
+    "branch_name": "Main Branch",
+    "own_open_shift": {
+      "id": "07d057dc-d22a-43f4-b22f-766439908358",
+      "currency": "PHP",
+      "opened_at": "2026-10-12T00:55:37.221Z",
+      "actor_user_id": "6e000000-0000-4000-8000-000000000001",
+      "expected_cash_minor": 700
+    },
+    "organization_id": "6d7b4596-0ff4-407c-9d9c-3f4afca417ea",
+    "settings_revision": 1
+  },
+  "version": 1,
+  "record_action": {
+    "kind": "expense.record",
+    "expense": {
+      "id": "3517e828-2245-43ea-bd58-508a7fce08ef",
+      "payee": null,
+      "reason": "Operator confirmed expense evidence",
+      "source": "cash_drawer",
+      "category": "other",
+      "currency": "PHP",
+      "reversal": null,
+      "shift_id": "07d057dc-d22a-43f4-b22f-766439908358",
+      "branch_id": "2130df52-93a1-4bb0-97f9-d7abc7b38d8c",
+      "reference": null,
+      "created_at": "2026-10-12T00:55:37.281Z",
+      "request_id": "6e300000-0000-4000-8000-000000000004",
+      "occurred_at": "2026-10-12T00:55:37.281Z",
+      "amount_minor": 300,
+      "actor_user_id": "6e000000-0000-4000-8000-000000000001",
+      "payment_method": "cash",
+      "organization_id": "6d7b4596-0ff4-407c-9d9c-3f4afca417ea",
+      "manual_confirmed": true,
+      "settings_revision": 1
+    },
+    "request_id": "6e300000-0000-4000-8000-000000000004"
+  },
+  "current_expense": {
+    "id": "3517e828-2245-43ea-bd58-508a7fce08ef",
+    "payee": null,
+    "reason": "Operator confirmed expense evidence",
+    "source": "cash_drawer",
+    "category": "other",
+    "currency": "PHP",
+    "reversal": {
+      "id": "ad1d7210-8596-470a-ba51-7393e7a7f2aa",
+      "reason": "Confirmed full expense correction",
+      "source": "cash_drawer",
+      "currency": "PHP",
+      "shift_id": "07d057dc-d22a-43f4-b22f-766439908358",
+      "branch_id": "2130df52-93a1-4bb0-97f9-d7abc7b38d8c",
+      "reference": null,
+      "created_at": "2026-10-12T00:55:37.288Z",
+      "expense_id": "3517e828-2245-43ea-bd58-508a7fce08ef",
+      "request_id": "6e300000-0000-4000-8000-000000000005",
+      "occurred_at": "2026-10-12T00:55:37.288Z",
+      "amount_minor": 300,
+      "actor_user_id": "6e000000-0000-4000-8000-000000000001",
+      "organization_id": "6d7b4596-0ff4-407c-9d9c-3f4afca417ea",
+      "manual_confirmed": true
+    },
+    "shift_id": "07d057dc-d22a-43f4-b22f-766439908358",
+    "branch_id": "2130df52-93a1-4bb0-97f9-d7abc7b38d8c",
+    "reference": null,
+    "created_at": "2026-10-12T00:55:37.281Z",
+    "request_id": "6e300000-0000-4000-8000-000000000004",
+    "occurred_at": "2026-10-12T00:55:37.281Z",
+    "amount_minor": 300,
+    "actor_user_id": "6e000000-0000-4000-8000-000000000001",
+    "payment_method": "cash",
+    "organization_id": "6d7b4596-0ff4-407c-9d9c-3f4afca417ea",
+    "manual_confirmed": true,
+    "settings_revision": 1
+  },
+  "reversal_action": {
+    "kind": "expense.reverse",
+    "reversal": {
+      "id": "ad1d7210-8596-470a-ba51-7393e7a7f2aa",
+      "reason": "Confirmed full expense correction",
+      "source": "cash_drawer",
+      "currency": "PHP",
+      "shift_id": "07d057dc-d22a-43f4-b22f-766439908358",
+      "branch_id": "2130df52-93a1-4bb0-97f9-d7abc7b38d8c",
+      "reference": null,
+      "created_at": "2026-10-12T00:55:37.288Z",
+      "expense_id": "3517e828-2245-43ea-bd58-508a7fce08ef",
+      "request_id": "6e300000-0000-4000-8000-000000000005",
+      "occurred_at": "2026-10-12T00:55:37.288Z",
+      "amount_minor": 300,
+      "actor_user_id": "6e000000-0000-4000-8000-000000000001",
+      "organization_id": "6d7b4596-0ff4-407c-9d9c-3f4afca417ea",
+      "manual_confirmed": true
+    },
+    "expense_id": "3517e828-2245-43ea-bd58-508a7fce08ef",
+    "request_id": "6e300000-0000-4000-8000-000000000005"
+  }
+}

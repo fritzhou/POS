@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>NexaPOS — Email verification design preview</title></head>
+<body style="margin:0;background:#f3f6fb;font-family:Arial,Helvetica,sans-serif;color:#18273f;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:32px 16px;">
+    <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
+      <tr><td style="padding:12px 20px;border:1px solid #c9d9f5;border-radius:12px;background:#eaf1ff;color:#234c8c;font-size:12px;line-height:18px;letter-spacing:.4px;"><strong>DESIGN PREVIEW · PLACEHOLDER</strong><br>This static design is not an email delivery or security integration.</td></tr>
+      <tr><td style="height:20px;"></td></tr>
+      <tr><td style="background:#13243d;padding:28px 32px;border-radius:16px 16px 0 0;color:#fff;">
+        <span style="display:inline-block;background:#2877ef;border-radius:10px;padding:10px 14px;font-size:23px;font-weight:700;">N</span>
+        <span style="display:inline-block;vertical-align:middle;margin-left:12px;font-size:24px;font-weight:700;">NexaPOS<br><span style="font-size:12px;font-weight:400;color:#bed0e8;">Smart Retail &amp; Cafe POS</span></span>
+      </td></tr>
+      <tr><td style="background:#fff;padding:36px 32px;border:1px solid #e4eaf2;border-top:0;border-radius:0 0 16px 16px;">
+        <p style="margin:0 0 12px;color:#168b89;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Email verification</p>
+        <h1 style="margin:0 0 20px;font-size:28px;line-height:36px;font-weight:700;">Welcome to NexaPOS</h1>
+        <p style="margin:0 0 14px;font-size:15px;line-height:25px;">Hello {{ recipient_name }},</p>
+        <p style="margin:0 0 26px;font-size:15px;line-height:25px;color:#536277;">Verify your email address to continue setting up {{ business_name }}. Your organization and Owner membership are created only after the backend verifies your account.</p>
+        <p style="margin:0 0 26px;"><span style="display:inline-block;background:#2877ef;color:#fff;padding:15px 22px;border-radius:9px;font-size:14px;font-weight:700;">Verify email — Placeholder</span></p>
+        <div style="padding:18px 20px;background:#f5f8fc;border:1px solid #e2e9f2;border-radius:10px;font-size:13px;line-height:21px;">
+          <strong>Link expiry:</strong> {{ verification_expiry }}<br>
+          <strong>Security:</strong> NexaPOS will never ask you to reply with a password, PIN, or recovery code.
+        </div>
+        <p style="margin:24px 0 0;font-size:13px;line-height:22px;color:#68758a;">If you did not start this business setup, ignore this email. Never share your password or verification link.</p>
+      </td></tr>
+      <tr><td style="padding:22px 16px;text-align:center;font-size:11px;line-height:19px;color:#6c7a8f;">
+        Sender preview: security@nexapos.com (example only; not configured)<br>
+        Current provider: Supabase Auth Email after project setup.<br>
+        Branded delivery, custom SMTP, and external email providers: Coming Soon.
+      </td></tr>
+    </table>
+  </td></tr></table>
+</body>
+</html>

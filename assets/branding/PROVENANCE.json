@@ -1,0 +1,31 @@
+{
+  "source": "assets/branding/nexapos-launcher.svg",
+  "source_sha256": "def29300f02606b774025a76f3f2df4951c54c6659946dc2880938158ea8885c",
+  "authorship": "Original NexaPOS geometric artwork; no third-party image or glyph copied.",
+  "identity": "BrandMark POS-terminal concept; AppBrand primary #2563eb and secondary #0d9488.",
+  "generator": "tool/generate_launcher_icons.py (Pillow 12.3.0)",
+  "assets": {
+    "android/app/src/main/res/mipmap-hdpi/ic_launcher.png": "a48b28a34e22ce90fc97dea5dc1bb5bc10f3d81c75e88f62edb8f39324142b53",
+    "android/app/src/main/res/mipmap-mdpi/ic_launcher.png": "0bf5afddccd9da1a442afa19a41d7d807f4d699103a3623b2935ef40b90999a5",
+    "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png": "248c141dba4016b1c582d5ccea7f797f2a9695b08fe1972a43c724948ee59539",
+    "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png": "96c97156984b04d1dc0f749cb361581aff2c5420c462c68713108e08d99ba5be",
+    "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png": "5814a2d14ae636cdc0f4ca42069971600a95ac58438776b27d81fb09210046af",
+    "windows/runner/resources/app_icon.ico": "fd6a9e669e9747684d5826d59fbc79baf1b06fa6762612fa96ce2fce3ef2abf9"
+  },
+  "windows_sizes": [
+    16,
+    24,
+    32,
+    48,
+    64,
+    128,
+    256
+  ],
+  "android_sizes": {
+    "mdpi": 48,
+    "hdpi": 72,
+    "xhdpi": 96,
+    "xxhdpi": 144,
+    "xxxhdpi": 192
+  }
+}

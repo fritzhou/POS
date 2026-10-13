@@ -1,0 +1,159 @@
+{
+  "grants": [
+    {
+      "state": "administratively_resolved",
+      "actor_id": "a5000000-0000-4000-8000-000000000001",
+      "currency": "PHP",
+      "grant_id": "438aa5bc-021b-437a-a9f8-bcf930dca0e7",
+      "shift_id": "a8d2ed73-4f9a-49fb-a7dc-2b555f2dcd41",
+      "branch_id": "88fdea96-a6c7-4f70-a365-c044ac1a8ca1",
+      "device_id": "a5100000-0000-4000-8000-000000000003",
+      "issued_at": "2026-10-11T03:09:36.413Z",
+      "can_review": false,
+      "expires_at": "2026-10-11T11:09:36.413Z",
+      "max_events": 1000,
+      "released_at": null,
+      "total_minor": 100,
+      "review_count": 1,
+      "last_sequence": 2,
+      "outcome_count": 1,
+      "max_total_minor": 100000000,
+      "organization_id": "56ee83c3-3e15-4ab8-b17e-6ca3f31a2b56",
+      "blocks_shift_close": false,
+      "remaining_exposure_minor": 99999900,
+      "remaining_exposure_events": 999,
+      "administratively_resolved_at": "2026-10-11T12:09:36.416Z"
+    },
+    {
+      "state": "administratively_resolved",
+      "actor_id": "a5000000-0000-4000-8000-000000000001",
+      "currency": "PHP",
+      "grant_id": "d78b6492-d465-4ceb-9f9f-b25cc256521d",
+      "shift_id": "3a7edf7b-a4b2-4dc7-a43a-0ee407058f54",
+      "branch_id": "88fdea96-a6c7-4f70-a365-c044ac1a8ca1",
+      "device_id": "a5100000-0000-4000-8000-000000000001",
+      "issued_at": "2026-10-11T03:09:36.375Z",
+      "can_review": false,
+      "expires_at": "2026-10-11T11:09:36.375Z",
+      "max_events": 1000,
+      "released_at": null,
+      "total_minor": 200,
+      "review_count": 1,
+      "last_sequence": 2,
+      "outcome_count": 2,
+      "max_total_minor": 100000000,
+      "organization_id": "56ee83c3-3e15-4ab8-b17e-6ca3f31a2b56",
+      "blocks_shift_close": false,
+      "remaining_exposure_minor": 99999800,
+      "remaining_exposure_events": 998,
+      "administratively_resolved_at": "2026-10-11T12:09:36.384Z"
+    }
+  ],
+  "policy": {
+    "revision": 1,
+    "organization_id": "56ee83c3-3e15-4ab8-b17e-6ca3f31a2b56",
+    "idle_lock_minutes": 5,
+    "require_privileged_mfa": false
+  },
+  "devices": [
+    {
+      "actor_id": "a5000000-0000-4000-8000-000000000001",
+      "platform": "windows",
+      "branch_id": "88fdea96-a6c7-4f70-a365-c044ac1a8ca1",
+      "device_id": "a5100000-0000-4000-8000-000000000003",
+      "can_manage": true,
+      "revoked_at": "2026-10-11T12:09:36.412Z",
+      "device_name": "Actually missing earlier paid sequence",
+      "enrolled_at": "2026-10-11T12:09:36.407Z",
+      "last_sync_at": "2026-10-11T12:09:36.420Z",
+      "organization_id": "56ee83c3-3e15-4ab8-b17e-6ca3f31a2b56",
+      "revocation_reason": "Actual lost key and missing first paid record"
+    },
+    {
+      "actor_id": "a5000000-0000-4000-8000-000000000001",
+      "platform": "windows",
+      "branch_id": "88fdea96-a6c7-4f70-a365-c044ac1a8ca1",
+      "device_id": "a5100000-0000-4000-8000-000000000001",
+      "can_manage": true,
+      "revoked_at": "2026-10-11T12:09:36.361Z",
+      "device_name": "Counter One",
+      "enrolled_at": "2026-10-11T12:09:36.325Z",
+      "last_sync_at": "2026-10-11T12:09:36.393Z",
+      "organization_id": "56ee83c3-3e15-4ab8-b17e-6ca3f31a2b56",
+      "revocation_reason": "Original device key was removed"
+    }
+  ],
+  "provenance": "Actual gapped paid-proof RPC projections from isolated Phase 5 mock-Auth SQL tests; never production records",
+  "notifications": [
+    {
+      "id": "14c50239-1862-4697-b321-641e56a560c9",
+      "title": "Paid offline event needs review",
+      "action": "security.offline_paid_event_review",
+      "message": "Original paid evidence was retained for reconciliation without changing the closed or revoked shift.",
+      "read_at": null,
+      "branch_id": "88fdea96-a6c7-4f70-a365-c044ac1a8ca1",
+      "created_at": "2026-10-11T12:09:36.296Z",
+      "organization_id": "56ee83c3-3e15-4ab8-b17e-6ca3f31a2b56"
+    },
+    {
+      "id": "4c1669b1-aa81-402f-b95c-046deee5d7d7",
+      "title": "Device name changed",
+      "action": "security.device_renamed",
+      "message": "An administrator changed an enrolled device name.",
+      "read_at": "2026-10-11T12:09:36.368Z",
+      "branch_id": "88fdea96-a6c7-4f70-a365-c044ac1a8ca1",
+      "created_at": "2026-10-11T12:09:36.296Z",
+      "organization_id": "56ee83c3-3e15-4ab8-b17e-6ca3f31a2b56"
+    },
+    {
+      "id": "52d51106-b338-4b2e-a3da-58d7214e92f9",
+      "title": "Device revoked",
+      "action": "security.device_revoked",
+      "message": "An administrator revoked offline capture for an enrolled device. Original paid evidence remains eligible for review.",
+      "read_at": null,
+      "branch_id": "88fdea96-a6c7-4f70-a365-c044ac1a8ca1",
+      "created_at": "2026-10-11T12:09:36.296Z",
+      "organization_id": "56ee83c3-3e15-4ab8-b17e-6ca3f31a2b56"
+    },
+    {
+      "id": "85f83ec6-7b77-4c9f-a3e0-af4c75f5dfdb",
+      "title": "Device revoked",
+      "action": "security.device_revoked",
+      "message": "An administrator revoked offline capture for an enrolled device. Original paid evidence remains eligible for review.",
+      "read_at": null,
+      "branch_id": "88fdea96-a6c7-4f70-a365-c044ac1a8ca1",
+      "created_at": "2026-10-11T12:09:36.296Z",
+      "organization_id": "56ee83c3-3e15-4ab8-b17e-6ca3f31a2b56"
+    },
+    {
+      "id": "f2fe6f30-708a-454e-8279-70f0afc56ca6",
+      "title": "Offline grant reviewed",
+      "action": "security.grant_administratively_resolved",
+      "message": "An expired grant on a revoked device was administratively resolved. Unknown paid-event exposure remains open for reconciliation.",
+      "read_at": null,
+      "branch_id": "88fdea96-a6c7-4f70-a365-c044ac1a8ca1",
+      "created_at": "2026-10-11T12:09:36.296Z",
+      "organization_id": "56ee83c3-3e15-4ab8-b17e-6ca3f31a2b56"
+    },
+    {
+      "id": "fa53b956-d72c-4062-94ff-d82dee585227",
+      "title": "Paid offline event needs review",
+      "action": "security.offline_paid_event_review",
+      "message": "Original paid evidence was retained for reconciliation without changing the closed or revoked shift.",
+      "read_at": null,
+      "branch_id": "88fdea96-a6c7-4f70-a365-c044ac1a8ca1",
+      "created_at": "2026-10-11T12:09:36.296Z",
+      "organization_id": "56ee83c3-3e15-4ab8-b17e-6ca3f31a2b56"
+    },
+    {
+      "id": "ff6029eb-8f6b-4afa-826b-e31b17491a1a",
+      "title": "Offline grant reviewed",
+      "action": "security.grant_administratively_resolved",
+      "message": "An expired grant on a revoked device was administratively resolved. Unknown paid-event exposure remains open for reconciliation.",
+      "read_at": null,
+      "branch_id": "88fdea96-a6c7-4f70-a365-c044ac1a8ca1",
+      "created_at": "2026-10-11T12:09:36.296Z",
+      "organization_id": "56ee83c3-3e15-4ab8-b17e-6ca3f31a2b56"
+    }
+  ]
+}

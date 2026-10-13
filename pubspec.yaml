@@ -1,0 +1,51 @@
+name: nexapos
+description: NexaPOS — Smart Retail & Cafe POS. Windows and Android foundation.
+publish_to: none
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.12.0 <4.0.0'
+  flutter: '>=3.44.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^3.4.3
+  supabase_flutter: ^2.18.0
+  flutter_secure_storage: ^11.2.0
+  drift: ^2.35.2
+  sqlite3: ^3.5.2
+  path_provider: ^2.1.6
+  path: ^1.9.1
+  uuid: ^4.6.0
+  crypto: ^3.0.6
+  cryptography: ^2.9.0
+  pdf: ^3.13.1
+  printing: ^5.15.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  http: ^1.6.0
+  drift_dev: ^2.35.1
+  build_runner: ^2.15.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/fonts/NotoSans-Regular.ttf
+    - assets/fonts/NotoSans-Bold.ttf
+    - assets/fonts/NexaPOS-CJK-Regular.ttf
+    - assets/fonts/NOTO-LICENSE.txt
+    - assets/fonts/NOTO-CJK-LICENSE.txt
+    - assets/fonts/PROVENANCE.json
+
+# sqlite3 3.5.2 verifies the native release assets against published SHA256s.
+# The application refuses to open durable business files without SQLCipher.
+hooks:
+  user_defines:
+    sqlite3:
+      source: sqlcipher

@@ -1,0 +1,372 @@
+{
+  "pull": {
+    "cursor": 8,
+    "changes": [
+      {
+        "id": "d35f256d-a999-4789-9388-2af920f10307",
+        "kind": "product",
+        "value": {
+          "id": "d35f256d-a999-4789-9388-2af920f10307",
+          "sku": "P4-FIRST",
+          "name": "Café 😀 \"frozen\" product",
+          "unit": "each",
+          "active": true,
+          "barcode": "P4-BARCODE",
+          "currency": "PHP",
+          "revision": 2,
+          "category_id": null,
+          "price_minor": 5000,
+          "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03"
+        },
+        "deleted": false,
+        "revision": 5
+      },
+      {
+        "id": "cb6cc4c2-0abb-42a4-a2d9-9078516765b8",
+        "kind": "context",
+        "value": {
+          "address": null,
+          "contact": null,
+          "tax_bps": 500,
+          "currency": "PHP",
+          "branch_id": "cb6cc4c2-0abb-42a4-a2d9-9078516765b8",
+          "branch_code": "MAIN",
+          "branch_name": "Main Branch",
+          "business_name": "Phase 4 fixture",
+          "receipt_footer": null,
+          "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03",
+          "settings_revision": 3
+        },
+        "deleted": false,
+        "revision": 6
+      },
+      {
+        "id": "d35f256d-a999-4789-9388-2af920f10307",
+        "kind": "stock",
+        "value": {
+          "quantity": 0,
+          "revision": 2,
+          "product_id": "d35f256d-a999-4789-9388-2af920f10307"
+        },
+        "deleted": false,
+        "revision": 7
+      },
+      {
+        "id": "d35f256d-a999-4789-9388-2af920f10307",
+        "kind": "stock",
+        "value": {
+          "quantity": -1,
+          "revision": 3,
+          "product_id": "d35f256d-a999-4789-9388-2af920f10307"
+        },
+        "deleted": false,
+        "revision": 8
+      }
+    ],
+    "has_more": false,
+    "server_time": "2026-10-10T06:02:17.675Z"
+  },
+  "event": {
+    "payload": {
+      "id": "a4400000-0000-4000-8000-000000000001",
+      "items": [
+        {
+          "id": "a4500000-0000-4000-8000-000000000001",
+          "quantity": 1,
+          "tax_minor": 13,
+          "product_id": "d35f256d-a999-4789-9388-2af920f10307",
+          "sku_snapshot": "P4-FIRST",
+          "name_snapshot": "Café 😀 \"frozen\" product",
+          "discount_minor": 0,
+          "line_total_minor": 113,
+          "unit_price_minor": 100
+        }
+      ],
+      "currency": "PHP",
+      "payments": [
+        {
+          "id": "a4600000-0000-4000-8000-000000000001",
+          "method": "cash",
+          "reference": null,
+          "amount_minor": 113,
+          "verification_mode": "cash"
+        }
+      ],
+      "shift_id": "d1451645-0235-4c1c-a342-1362427601f4",
+      "tax_minor": 13,
+      "customer_id": null,
+      "total_minor": 113,
+      "discount_minor": 0,
+      "receipt_number": "OFFLINE-1",
+      "subtotal_minor": 100
+    },
+    "actor_id": "a4000000-0000-4000-8000-000000000001",
+    "event_id": "a4300000-0000-4000-8000-000000000001",
+    "branch_id": "cb6cc4c2-0abb-42a4-a2d9-9078516765b8",
+    "device_id": "a4100000-0000-4000-8000-000000000001",
+    "event_type": "sale.created",
+    "occurred_at": "2026-10-10T06:02:17.640Z",
+    "schema_version": 1,
+    "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03"
+  },
+  "digest": "bef855b935d5f09d84cde8a3dddb61fbf72a4159900c301e615e5639362b00a2",
+  "review": {
+    "digest": "5f665c0431891e1f1c231c5470acf128fb7aa7cb89bf5334f7b484c0785addfd",
+    "status": "review",
+    "actor_id": "a4000000-0000-4000-8000-000000000001",
+    "event_id": "a4300000-0000-4000-8000-000000000002",
+    "grant_id": "e8011a24-34b5-4258-9780-7f47d6cd7be5",
+    "sequence": 2,
+    "branch_id": "cb6cc4c2-0abb-42a4-a2d9-9078516765b8",
+    "device_id": "a4100000-0000-4000-8000-000000000001",
+    "document_id": "a4400000-0000-4000-8000-000000000002",
+    "recorded_at": "2026-10-10T06:02:17.689Z",
+    "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03",
+    "reconciliation_id": "6cae79e6-8ea3-4333-94fe-8b2cecd39bd2",
+    "reconciliation_code": "SHIFT_CLOSED"
+  },
+  "prepare": {
+    "grant": {
+      "claims": {
+        "role": "owner",
+        "issuer": "https://example.invalid",
+        "key_id": "test-key",
+        "tax_bps": 1250,
+        "actor_id": "a4000000-0000-4000-8000-000000000001",
+        "audience": "nexapos.offline.v1",
+        "currency": "PHP",
+        "grant_id": "e8011a24-34b5-4258-9780-7f47d6cd7be5",
+        "shift_id": "d1451645-0235-4c1c-a342-1362427601f4",
+        "branch_id": "cb6cc4c2-0abb-42a4-a2d9-9078516765b8",
+        "device_id": "a4100000-0000-4000-8000-000000000001",
+        "issued_at": "2026-10-10T06:02:17.640Z",
+        "expires_at": "2026-10-10T14:02:17.640Z",
+        "max_events": 1000,
+        "business_name": "Phase 4 fixture",
+        "membership_id": "7288481d-fdbe-4e8e-8ffa-1e496d6b8368",
+        "schema_version": 1,
+        "allowed_actions": [
+          "sale.created"
+        ],
+        "max_total_minor": 100000000,
+        "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03",
+        "snapshot_digest": "07cbfbfae72a595e4e3eeca91e0100bfa9b2bfc97c36b408bebf74bddb158a38",
+        "settings_revision": 2
+      },
+      "signature": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "snapshot": {
+      "shift": {
+        "id": "d1451645-0235-4c1c-a342-1362427601f4",
+        "closure": null,
+        "currency": "PHP",
+        "branch_id": "cb6cc4c2-0abb-42a4-a2d9-9078516765b8",
+        "opened_at": "2026-10-10T06:02:17.605826+00:00",
+        "request_id": "9cae992e-5361-4fba-a1ff-d05cd7cc3418",
+        "actor_user_id": "a4000000-0000-4000-8000-000000000001",
+        "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03",
+        "opening_cash_minor": 1000,
+        "expected_cash_minor": 1000
+      },
+      "stock": [
+        {
+          "quantity": 2,
+          "revision": 1,
+          "product_id": "d35f256d-a999-4789-9388-2af920f10307"
+        }
+      ],
+      "cursor": 4,
+      "context": {
+        "address": null,
+        "contact": null,
+        "tax_bps": 1250,
+        "currency": "PHP",
+        "branch_id": "cb6cc4c2-0abb-42a4-a2d9-9078516765b8",
+        "branch_code": "MAIN",
+        "branch_name": "Main Branch",
+        "business_name": "Phase 4 fixture",
+        "receipt_footer": null,
+        "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03",
+        "settings_revision": 2
+      },
+      "products": [
+        {
+          "id": "d35f256d-a999-4789-9388-2af920f10307",
+          "sku": "P4-FIRST",
+          "name": "Café 😀 \"frozen\" product",
+          "unit": "each",
+          "active": true,
+          "barcode": "P4-BARCODE",
+          "currency": "PHP",
+          "revision": 1,
+          "category_id": null,
+          "price_minor": 100,
+          "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03",
+          "available_quantity": 2
+        }
+      ],
+      "categories": []
+    },
+    "server_time": "2026-10-10T06:02:17.642Z"
+  },
+  "accepted": {
+    "digest": "bef855b935d5f09d84cde8a3dddb61fbf72a4159900c301e615e5639362b00a2",
+    "status": "accepted",
+    "receipt": {
+      "id": "a4400000-0000-4000-8000-000000000001",
+      "items": [
+        {
+          "id": "a4500000-0000-4000-8000-000000000001",
+          "sku": "P4-FIRST",
+          "unit": "each",
+          "sale_id": "a4400000-0000-4000-8000-000000000001",
+          "quantity": 1,
+          "tax_minor": 13,
+          "product_id": "d35f256d-a999-4789-9388-2af920f10307",
+          "product_name": "Café 😀 \"frozen\" product",
+          "discount_minor": 0,
+          "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03",
+          "line_total_minor": 113,
+          "product_revision": 1,
+          "unit_price_minor": 100,
+          "reversed_quantity": 0,
+          "remaining_quantity": 1,
+          "line_subtotal_minor": 100
+        }
+      ],
+      "address": null,
+      "contact": null,
+      "tax_bps": 1250,
+      "currency": "PHP",
+      "payments": [
+        {
+          "id": "a4600000-0000-4000-8000-000000000001",
+          "method": "cash",
+          "sale_id": "a4400000-0000-4000-8000-000000000001",
+          "reference": null,
+          "amount_minor": 113,
+          "change_minor": 87,
+          "reversed_minor": 0,
+          "tendered_minor": 200,
+          "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03",
+          "remaining_minor": 113,
+          "manual_confirmed": false
+        }
+      ],
+      "shift_id": "d1451645-0235-4c1c-a342-1362427601f4",
+      "branch_id": "cb6cc4c2-0abb-42a4-a2d9-9078516765b8",
+      "reversals": [],
+      "tax_minor": 13,
+      "created_at": "2026-10-10T06:02:17.64+00:00",
+      "request_id": "a4300000-0000-4000-8000-000000000001",
+      "branch_code": "MAIN",
+      "branch_name": "Main Branch",
+      "customer_id": null,
+      "total_minor": 113,
+      "actor_user_id": "a4000000-0000-4000-8000-000000000001",
+      "business_name": "Phase 4 fixture",
+      "discount_minor": 0,
+      "receipt_footer": null,
+      "receipt_number": "MAIN-000002",
+      "reversed_minor": 0,
+      "subtotal_minor": 100,
+      "discount_reason": null,
+      "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03",
+      "receipt_sequence": 2,
+      "business_snapshot": {
+        "address": null,
+        "contact": null,
+        "branch_code": "MAIN",
+        "branch_name": "Main Branch",
+        "business_name": "Phase 4 fixture",
+        "receipt_footer": null
+      },
+      "settings_revision": 2
+    },
+    "actor_id": "a4000000-0000-4000-8000-000000000001",
+    "event_id": "a4300000-0000-4000-8000-000000000001",
+    "grant_id": "e8011a24-34b5-4258-9780-7f47d6cd7be5",
+    "sequence": 1,
+    "branch_id": "cb6cc4c2-0abb-42a4-a2d9-9078516765b8",
+    "device_id": "a4100000-0000-4000-8000-000000000001",
+    "accepted_at": "2026-10-10T06:02:17.667Z",
+    "document_id": "a4400000-0000-4000-8000-000000000001",
+    "stock_impacts": [
+      {
+        "revision": 3,
+        "product_id": "d35f256d-a999-4789-9388-2af920f10307"
+      }
+    ],
+    "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03",
+    "reconciliation_id": "4bd79f35-0b32-45f1-b27a-919c7f361cb9",
+    "server_receipt_id": "a4400000-0000-4000-8000-000000000001",
+    "reconciliation_code": "STOCK_DEFICIT"
+  },
+  "actor_id": "a4000000-0000-4000-8000-000000000001",
+  "branch_id": "cb6cc4c2-0abb-42a4-a2d9-9078516765b8",
+  "device_id": "a4100000-0000-4000-8000-000000000001",
+  "signature": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "authorization": {
+    "grant_id": "e8011a24-34b5-4258-9780-7f47d6cd7be5",
+    "sequence": 1,
+    "payment_evidence": {
+      "a4600000-0000-4000-8000-000000000001": {
+        "tendered_minor": 200
+      }
+    }
+  },
+  "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03",
+  "review_event": {
+    "payload": {
+      "id": "a4400000-0000-4000-8000-000000000002",
+      "items": [
+        {
+          "id": "a4500000-0000-4000-8000-000000000002",
+          "quantity": 1,
+          "tax_minor": 13,
+          "product_id": "d35f256d-a999-4789-9388-2af920f10307",
+          "sku_snapshot": "P4-FIRST",
+          "name_snapshot": "Café 😀 \"frozen\" product",
+          "discount_minor": 0,
+          "line_total_minor": 113,
+          "unit_price_minor": 100
+        }
+      ],
+      "currency": "PHP",
+      "payments": [
+        {
+          "id": "a4600000-0000-4000-8000-000000000002",
+          "method": "gcash",
+          "reference": "MANUAL-LOCAL-001",
+          "amount_minor": 113,
+          "verification_mode": "manual"
+        }
+      ],
+      "shift_id": "d1451645-0235-4c1c-a342-1362427601f4",
+      "tax_minor": 13,
+      "customer_id": null,
+      "total_minor": 113,
+      "discount_minor": 0,
+      "receipt_number": "OFFLINE-2",
+      "subtotal_minor": 100
+    },
+    "actor_id": "a4000000-0000-4000-8000-000000000001",
+    "event_id": "a4300000-0000-4000-8000-000000000002",
+    "branch_id": "cb6cc4c2-0abb-42a4-a2d9-9078516765b8",
+    "device_id": "a4100000-0000-4000-8000-000000000001",
+    "event_type": "sale.created",
+    "occurred_at": "2026-10-10T06:02:17.640Z",
+    "schema_version": 1,
+    "organization_id": "68758b91-8905-4e0d-8194-c9671e6cef03"
+  },
+  "review_authorization": {
+    "grant_id": "e8011a24-34b5-4258-9780-7f47d6cd7be5",
+    "sequence": 2,
+    "payment_evidence": {
+      "a4600000-0000-4000-8000-000000000002": {
+        "manual_confirmed": true
+      }
+    }
+  },
+  "review_signature": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+}

@@ -1,0 +1,96 @@
+{
+  "provenance": "Static interoperability fixture, not application or live backend records. Seed is public RFC 8032 test vector 1. Event hash independently checked with Python hashlib and sorted compact UTF-8 JSON.",
+  "public_key": "11qYAYKxCrfVS_7TyWQHOg7hcvPapiMlrwIaaPcHURo",
+  "event": {
+    "event_id": "00000000-0000-4000-8000-000000000001",
+    "actor_id": "00000000-0000-4000-8000-000000000002",
+    "organization_id": "00000000-0000-4000-8000-000000000003",
+    "branch_id": "00000000-0000-4000-8000-000000000004",
+    "device_id": "00000000-0000-4000-8000-000000000005",
+    "event_type": "sale.created",
+    "occurred_at": "2026-10-10T12:13:14.123456Z",
+    "schema_version": 1,
+    "payload": {
+      "10": "ten",
+      "2": "two",
+      "label": "Café 😀",
+      "integer": 9007199254740991,
+      "values": [
+        null,
+        true,
+        false,
+        0
+      ]
+    }
+  },
+  "canonical_event": "{\"actor_id\":\"00000000-0000-4000-8000-000000000002\",\"branch_id\":\"00000000-0000-4000-8000-000000000004\",\"device_id\":\"00000000-0000-4000-8000-000000000005\",\"event_id\":\"00000000-0000-4000-8000-000000000001\",\"event_type\":\"sale.created\",\"occurred_at\":\"2026-10-10T12:13:14.123456Z\",\"organization_id\":\"00000000-0000-4000-8000-000000000003\",\"payload\":{\"10\":\"ten\",\"2\":\"two\",\"integer\":9007199254740991,\"label\":\"Café 😀\",\"values\":[null,true,false,0]},\"schema_version\":1}",
+  "event_digest": "d007dcd5a26cb15aac332be4316591162e63c4a0249228b1ad46c6ab2d6d28cb",
+  "signatures": [
+    {
+      "domain": "NexaPOS:grant:v1\n",
+      "payload": {
+        "schema_version": 1,
+        "issuer": "https://unit.supabase.co",
+        "audience": "nexapos.offline.v1",
+        "key_id": "unit-key",
+        "grant_id": "00000000-0000-4000-8000-000000000008",
+        "organization_id": "00000000-0000-4000-8000-000000000003",
+        "branch_id": "00000000-0000-4000-8000-000000000004",
+        "device_id": "00000000-0000-4000-8000-000000000005",
+        "actor_id": "00000000-0000-4000-8000-000000000002",
+        "membership_id": "00000000-0000-4000-8000-000000000006",
+        "role": "cashier",
+        "business_name": "Test business",
+        "allowed_actions": [
+          "sale.created"
+        ],
+        "issued_at": "2026-10-10T12:00:00.000Z",
+        "expires_at": "2026-10-10T20:00:00.000Z",
+        "shift_id": "00000000-0000-4000-8000-000000000007",
+        "currency": "PHP",
+        "tax_bps": 1200,
+        "settings_revision": 1,
+        "snapshot_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "max_events": 1000,
+        "max_total_minor": 100000000
+      },
+      "signature": "Fd2AHW-y2HhnEb5FxxVUARmlZS38G3FQTCJjq0iD9pzwJjeOehlWjP4u15b_lCIf1LX4FX6hWL5HLQPGwZgkAA"
+    },
+    {
+      "domain": "NexaPOS:enroll:v1\n",
+      "payload": {
+        "challenge_id": "00000000-0000-4000-8000-000000000011",
+        "nonce": "BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc",
+        "organization_id": "00000000-0000-4000-8000-000000000003",
+        "branch_id": "00000000-0000-4000-8000-000000000004",
+        "device_id": "00000000-0000-4000-8000-000000000005",
+        "actor_id": "00000000-0000-4000-8000-000000000002",
+        "public_key": "11qYAYKxCrfVS_7TyWQHOg7hcvPapiMlrwIaaPcHURo",
+        "expires_at": "2026-10-10T12:05:00.000Z"
+      },
+      "signature": "7QDmKVjwC05DvfeJD-EpKhuFr-14m5GAODCiZczk8rrYYB9NId3gk1PMuH2hIEnf0OxKZMggVx7HBeA4L8qzAw"
+    },
+    {
+      "domain": "NexaPOS:event:v1\n",
+      "payload": {
+        "event_digest": "d007dcd5a26cb15aac332be4316591162e63c4a0249228b1ad46c6ab2d6d28cb",
+        "grant_id": "00000000-0000-4000-8000-000000000008",
+        "sequence": 1,
+        "payment_evidence": {
+          "00000000-0000-4000-8000-000000000010": {
+            "tendered_minor": 10000
+          }
+        }
+      },
+      "signature": "BnU51E0_hj299lC7wGKpuWEr_MGWpPJLEIpiJAMDueP-WQwjamNJHCdnns7C4qtcmGIRFWkL89IPLJ01Uj08Bw"
+    },
+    {
+      "domain": "NexaPOS:release:v1\n",
+      "payload": {
+        "grant_id": "00000000-0000-4000-8000-000000000008",
+        "final_sequence": 1
+      },
+      "signature": "yK_nSnfPMAfo1gIvOjhHlUrsIwP8ZnbkmvUQerPYcMsDFNPd6wd8xtVD9Nj-VkyZBmSr_wgjqHYQtXtl1xhuDQ"
+    }
+  ]
+}

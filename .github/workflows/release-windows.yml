@@ -1,0 +1,76 @@
+name: NexaPOS Windows release
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [release/builds]
+    paths:
+      - '.github/workflows/release-windows.yml'
+      - 'pubspec.*'
+      - 'lib/**'
+      - 'windows/**'
+      - 'assets/**'
+      - 'test/**'
+      - 'tool/release/windows*'
+      - 'tool/verify_receipt_fonts.py'
+
+permissions:
+  contents: read
+
+jobs:
+  windows-x64:
+    runs-on: windows-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Check out the existing application
+        uses: actions/checkout@v4
+      - name: Install validated Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.0'
+          channel: stable
+          cache: true
+      - name: Prepare optional public client configuration
+        env:
+          PUBLIC_CLIENT_CONFIG_JSON: ${{ vars.NEXAPOS_PUBLIC_CLIENT_CONFIG_JSON }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($env:PUBLIC_CLIENT_CONFIG_JSON) {
+            # Repository variable: public URL/key/trust anchors only, never backend secrets.
+            New-Item -ItemType Directory -Path config -Force | Out-Null
+            $env:PUBLIC_CLIENT_CONFIG_JSON | Set-Content config/supabase.local.json -Encoding utf8
+          }
+      - name: Validate, build, package and smoke test the release
+        run: |
+          $arguments = @{
+            OutputDirectory = Join-Path $env:RUNNER_TEMP 'NexaPOS-release'
+            RunSmokeTests = $true
+          }
+          if (Test-Path -LiteralPath config/supabase.local.json) {
+            $arguments.DartDefinesFile = 'config/supabase.local.json'
+          }
+          ./tool/release/windows.ps1 @arguments
+      - name: Upload verified downloadable release files
+        uses: actions/upload-artifact@v4
+        with:
+          name: NexaPOS-Windows-x64
+          path: |
+            ${{ runner.temp }}/NexaPOS-release/NexaPOS-Windows-Portable.zip
+            ${{ runner.temp }}/NexaPOS-release/NexaPOS-Windows-Setup.exe
+            ${{ runner.temp }}/NexaPOS-release/NexaPOS-Windows-Manifest.json
+            ${{ runner.temp }}/NexaPOS-release/NexaPOS-Windows-SHA256SUMS.txt
+            ${{ runner.temp }}/NexaPOS-release/NexaPOS-Windows-Build-Report.txt
+            ${{ runner.temp }}/NexaPOS-release/NexaPOS-Windows-Smoke.txt
+          if-no-files-found: error
+          retention-days: 14
+      - name: Retain installer diagnostics when available
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: NexaPOS-Windows-diagnostics
+          path: ${{ runner.temp }}/NexaPOS-release/NexaPOS-Windows-Installer-Smoke.log
+          if-no-files-found: ignore
+          retention-days: 14
