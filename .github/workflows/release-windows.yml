@@ -17,6 +17,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: nexapos-windows-release-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   windows-x64:
     runs-on: windows-latest

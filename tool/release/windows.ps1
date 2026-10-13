@@ -23,7 +23,7 @@ param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
-if (-not $IsWindows -or -not [Environment]::Is64BitOperatingSystem) {
+if (-not $IsWindows -or [Runtime.InteropServices.RuntimeInformation]::OSArchitecture -ne [Runtime.InteropServices.Architecture]::X64) {
     throw 'Windows x64 with the Visual Studio C++ toolchain is required; Linux cannot compile this release.'
 }
 $repo = (Resolve-Path (Join-Path $PSScriptRoot '../..')).Path
@@ -103,7 +103,7 @@ try {
     Invoke-Checked flutter @('analyze', '--no-pub')
     Invoke-Checked flutter @('test', '--no-pub', '--concurrency=4')
     # Flutter 3.44 regenerates release plugin files only when pub is enabled.
-    $buildArgs = @('build', 'windows', '--release', '--target-platform=windows-x64')
+    $buildArgs = @('build', 'windows', '--release')
     $configured = $false
     if ($DartDefinesFile) {
         $DartDefinesFile = (Resolve-Path -LiteralPath $DartDefinesFile).Path
